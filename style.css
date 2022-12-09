@@ -1,20 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;500;600;700&display=swap');
 
-/* Reset config */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Hind Madurai', sans-serif;
 }
-body {
+body{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    background: linear-gradient(90deg, #dcd3d1cd 45%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, #dcd1cd 35%, rgba(0,212,255,1) 100%);
 }
-.container {
+.wrapper{
     height: 260px;
     background: #fff;
     max-width: 410px;
@@ -22,60 +21,58 @@ body {
     padding: 16px 25px;
     transition: height 0.5s ease;
 }
-.container .active {
+.wrapper.active{
     height: 530px;
 }
-header h1 {
+header h1{
     text-align: center;
-    font-weight: 600;
-    font-size: 28px;
+    font-weight: 500;
+    font-size: 21px;
 }
-header p {
-    color: #474747;
-    font-size: 16px;
+header p{
     text-align: center;
     margin-top: 5px;
+    color: #474747;
+    font-size: 16px;
 }
-.container .form {
-    padding: 20px 0 25px;
+.wrapper .form{
+    margin: 20px 0 25px;
 }
-.container :where(input,button) {
+.wrapper :where(input, button){
     width: 100%;
     height: 55px;
     border: none;
     outline: none;
-    border-radius: 7px;
+    border-radius: 5px;
 }
-.form input {
-    padding: 0 17px;
+.form input{
     font-size: 18px;
+    padding: 0 17px;
     border: 1px solid #999;
 }
-.form button {
-    color: #fff;
-    background: #987a71;
+.form button{
+    color:#fff;
+    cursor: pointer;
     margin-top: 20px;
     font-size: 17px;
-    cursor: pointer;
-    transition: all 0.5s;
+    background: #987a71;
 }
-.form button:hover {
-    background: #b8958a;
-}
-.container .qr-code {
+.wrapper .qr-code{
     display: flex;
+    opacity: 0;
+    pointer-events: none;
+    padding: 33px 0;
+    border-radius: 5px;
     align-items: center;
     justify-content: center;
-    padding: 33px 0;
-    pointer-events: none;
-    opacity: 0;
+    border: 1px solid #987a71;
 }
-.qr-code .img {
-    width: 220px;
+.wrapper .img{
+    width: 200px;
     height: auto;
 }
-.container .active .qr-code {
+.wrapper.active .qr-code{
     opacity: 1;
     pointer-events: auto;
-    transition: opacity 0.5s ease;
+    transition: apacity 0.5s ease;
 }
